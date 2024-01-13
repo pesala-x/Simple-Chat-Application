@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Controller.ClientFormController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="839.0" layoutX="-38.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-38.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../../../../../../../Users/User/Downloads/chat%20app%20wallapaper.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="375.0" layoutY="14.0" text="Client" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtSend" layoutX="65.0" layoutY="514.0" onAction="#txtSendOnAction" prefHeight="27.0" prefWidth="588.0" style="-fx-border-color: blue;" />
+      <TextArea fx:id="txtAreaClient" layoutX="65.0" layoutY="48.0" prefHeight="438.0" prefWidth="670.0" />
+      <Button fx:id="btnSend" layoutX="653.0" layoutY="506.0" mnemonicParsing="false" onAction="#btnSendOnAction" prefHeight="42.0" prefWidth="97.0" style="-fx-background-color: transparent;" text="Send" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="33.0" fitWidth="41.0">
+               <image>
+                  <Image url="@../../../../../../../Users/User/Downloads/icons8-send-64.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>
