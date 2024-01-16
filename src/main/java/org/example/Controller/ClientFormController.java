@@ -55,8 +55,8 @@ public class ClientFormController extends Application {
         dataOutputStream.flush();
     }
     @FXML
-    void txtSendOnAction(ActionEvent event) {
-
+    void txtSendOnAction(ActionEvent event) throws IOException {
+        btnSendOnAction(event);
     }
 
     public static void main(String[] args) {
@@ -66,7 +66,7 @@ public class ClientFormController extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("ClientForm.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/ClientForm.fxml"));
             Scene scene = new Scene(loader.load());
             stage.setScene(scene);
             stage.show();

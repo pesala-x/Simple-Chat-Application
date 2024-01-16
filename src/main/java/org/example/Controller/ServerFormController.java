@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -30,12 +31,15 @@ public class ServerFormController extends Application {
 
     String message="";
     Socket socket;
+    ServerSocket serverSocket;
     DataOutputStream dataOutputStream;
     DataInputStream dataInputStream;
     public void initialize() {
         new Thread(() ->{
             try {
-                socket=new Socket("localhost",5000);
+
+                serverSocket=new ServerSocket(3000);
+                socket=serverSocket.accept();
                 dataInputStream=new DataInputStream(socket.getInputStream());
                 dataOutputStream=new DataOutputStream(socket.getOutputStream());
                 while (!message.equals("exit")){
@@ -55,8 +59,8 @@ public class ServerFormController extends Application {
     }
 
     @FXML
-    void txtSendServerOnAction(ActionEvent event) {
-
+    void txtSendServerOnAction(ActionEvent event) throws IOException {
+        btnSendOnAction(event);
     }
     public static void main(String[] args) {
         launch(args);

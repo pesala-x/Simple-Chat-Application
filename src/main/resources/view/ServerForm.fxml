@@ -14,7 +14,7 @@
    <children>
       <ImageView fitHeight="600.0" fitWidth="839.0" layoutX="-28.0">
          <image>
-            <Image url="@../../../../../../../Users/User/Downloads/chat%20app%20wallapaper.jpg" />
+            <Image url="@../assets/chat app wallapaper.jpg" />
          </image>
       </ImageView>
       <Label layoutX="401.0" layoutY="24.0" text="Server" textFill="WHITE">
